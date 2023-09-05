@@ -5,10 +5,13 @@ FROM python:3.11
 WORKDIR /code
 
 #Копируем зависимости контейнера
-COPY ./requirements.txt
+COPY ./requirements.txt .
 
 #Устанавливаем зависимости
 RUN pip install -r requirements.txt
 
 #Копируем код приложения в контейнер
 COPY . .
+
+#запуск приложения
+CMD ["python", "manage.py","runserver"]
