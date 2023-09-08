@@ -88,25 +88,25 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'work21',
-        'USER': 'postgres',
-        'PASSWORD': '1973',
-    }
-}
-
-# для докера
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': work21-docker,
-#         'USER': postgres,
-#         'PASSWORD': mysecretpassword,
-#         'HOST': db,
+#         'NAME': 'work21',
+#         'USER': 'postgres',
+#         'PASSWORD': '1973',
 #     }
 # }
+
+# для докера
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': work21-docker,
+        'USER': postgres,
+        'PASSWORD': mysecretpassword,
+        'HOST': db,
+    }
+}
 
 
 # Password validation
