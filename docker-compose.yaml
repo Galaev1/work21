@@ -2,10 +2,10 @@ version: '3'
 
 services:
   db:
-    image: work21-docker
+    image: postgres
     environment:
       POSTGRES_PASSWORD: mysecretpassword
-      PGDATA: /var/lib/postgresql/data/pgdata
+      PGDATA: /data
 
   app:
     build: .
