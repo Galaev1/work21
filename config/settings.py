@@ -101,7 +101,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': work21-docker,
+        'NAME': postgres,
+        'PORT': 5432,
         'USER': postgres,
         'PASSWORD': mysecretpassword,
         'HOST': db,
